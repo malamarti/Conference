@@ -1,0 +1,59 @@
+﻿@model List<Conference.Models.ConferenceUser>
+@{
+    ViewData["Title"] = "AddUser";
+}
+<div class="container">
+    @if (TempData["Message"] != null) {
+
+        <div class="alert alert-success">
+
+            @TempData["Message"]
+
+        </div>
+    }
+    <h2>Conference</h2>
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @enctype = "multipart/form-data" })) {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <label>Name </label><br />
+            <input type="text" name="Name" value="" required />
+        </div>
+        <div class="form-group">
+            <label>LastName </label><br />
+            <input type="text" name="LastName" value="" required />
+        </div>
+        <div class="form-group">
+            <label>Email </label><br />
+            <input type="email" name="Email" value="" />
+        </div>
+        <div class="form-group">
+            <label for="avatar">Avatar</label>
+            <input type="file" name="avatar" required />
+        </div>
+        <button type="submit">Add</button>
+
+    }
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Avatar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <img src="~/images/@item.Avatar.FileName" height="64" width="64" />
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

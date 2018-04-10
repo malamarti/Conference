@@ -1,0 +1,19 @@
+{
+  "Name": "dsadas",
+  "LastName": "czxcxzcz",
+  "Avatar": {
+    "ContentDisposition": "form-data; name=\"avatar\"; filename=\"17457532_1879590488993619_6106351977721179661_n.jpg\"",
+    "ContentType": "image/jpeg",
+    "Headers": {
+      "Content-Disposition": [
+        "form-data; name=\"avatar\"; filename=\"17457532_1879590488993619_6106351977721179661_n.jpg\""
+      ],
+      "Content-Type": [
+        "image/jpeg"
+      ]
+    },
+    "Length": 38241,
+    "Name": "avatar",
+    "FileName": "17457532_1879590488993619_6106351977721179661_n.jpg"
+  }
+}
